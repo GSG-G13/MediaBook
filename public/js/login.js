@@ -16,5 +16,9 @@ btn.addEventListener("click", (e) => {
     }),
   })
     .then((data) => data.json())
-    .catch((err) => console.log(err));
+    .catch((err) => {
+      errores.forEach(element => {
+        
+      });
+    });
 });
