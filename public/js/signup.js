@@ -47,5 +47,14 @@ signInBtn.addEventListener("click", () => {
     body: JSON.stringify(body),
   })
     .then((data) => data.json())
-    .then((result) => console.log(result));
+    .then((result) => {
+      if(result.error == true){
+        window.alert(result.massage);
+      }else{
+        window.alert('create account successfully, login to your account')
+      }
+    })
+    .catch(err => {
+      window.alert(err)
+    })
 });
