@@ -3,13 +3,12 @@ DROP TABLE IF EXISTS users , posts ;
 
 CREATE TABLE users(
     id SERIAL PRIMARY KEY,
-    firstname VARCHAR(20) not null,
-    surname VARCHAR(20) not null,
-    mobileOrEmail VARCHAR(30) not null,
-    passwords VARCHAR(20) not null,
-    birthday VARCHAR(12),
-    gender VARCHAR(10),
-    token TEXT
+    firstname VARCHAR(50) not null,
+    surname VARCHAR(50) not null,
+    email VARCHAR(100) not null unique,
+    passwords TEXT not null,
+    birthday VARCHAR(50),
+    gender VARCHAR(20)
 );
 
 CREATE TABLE posts(
