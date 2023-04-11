@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(parser());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "..", "public")));
-app.use(clientError);
-app.use(serverError);
 app.use(router);
+
+
 module.exports = app;
