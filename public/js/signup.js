@@ -53,6 +53,12 @@ signInBtn.addEventListener("click", () => {
       }else{
         window.alert('create account successfully, login to your account')
       }
+    firstnameInput.value =''
+    surnameInput.value = ''
+    emailInput.value = ''
+    passwordInput.value = ''
+    dateInput.value = ''
+    gender.value= ''
     })
     .catch(err => {
       window.alert(err)
