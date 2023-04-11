@@ -85,6 +85,15 @@ body{
 	padding: 20px 0;
 	background: linear-gradient(#ffffff, #ffffff);
 }
+#emailInput{
+	width: 100%;
+    border: 1px solid #bdc7d8;
+    padding: 8px 12px;
+    font-size: 18px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 5px 0;
+	}
 .signup::after{
 	content: '';
 	clear: both;
@@ -110,6 +119,24 @@ body{
 }
 .form-section h2{
 	color: #333;
+}
+input[type="date" i]{
+	width: 100%;
+    border: 1px solid #bdc7d8;
+    padding: 8px 12px;
+    font-size: 18px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+#gender{
+	width: 100%;
+    border: 1px solid #bdc7d8;
+    padding: 8px 12px;
+    font-size: 18px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 5px 0;
 }
 .form-section h4{
 	margin: -10px 0 13px 0;
@@ -155,6 +182,7 @@ body{
     box-sizing: border-box;
     margin-right: 15px;
 }
+
 .bdate select {
     float: left;
     padding: 5px;
