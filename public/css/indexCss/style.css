@@ -305,3 +305,12 @@ input[type="date" i]{
 .footer .end span{
 	font-size: 13px;
 }
+#divMessage .paragraph{
+    background-color: red;
+    width: 240px;
+    height: 30px;
+    color: white;
+    border: #0e385f;
+    border-radius: 5px;
+    text-align: center;
+}
