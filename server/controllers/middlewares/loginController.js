@@ -23,7 +23,7 @@ const addLoginController = (req, res) => {
     loginQuery(email)
       .then((data) => {
         if (data.rowCount) {
-          bcrypt.compare(password, data.rows[0].passwords)
+          return bcrypt.compare(password, data.rows[0].passwords)
         }
         else {
           res.status(401).json({ message: "Please Create Account First!" })
