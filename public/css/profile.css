@@ -4,7 +4,7 @@
   
   body {
     margin: 40px 0px;
-    background-color: #385591;
+    background-color: #ED664C;
   }
   
   body,
@@ -51,7 +51,7 @@
     width: 1280px;
     margin: 0 auto;
     background-color: #e9ebee;
-    box-shadow: 0px 8px 30px #1d2d4f;
+    box-shadow: 0px 8px 30px #ED664C;
     border-radius: 4px;
     overflow: hidden;
   }
@@ -73,7 +73,7 @@
   }
   
   #device-bar-1 button:first-child {
-    background-color: #f35d5b;
+    background-color: #FDC75B;
   }
   
   #device-bar-1 button:nth-child(2) {
@@ -87,7 +87,7 @@
   /* Header */
   header {
     padding: 15px 20px;
-    background-color: #4267b2;
+    background-color: #FDC75B;
   }
   
   #logo {
@@ -109,7 +109,7 @@
     font-size: 16px;
     padding: 8px 15px;
     padding-right: 37px;
-    background-color: #3b5ca0;
+    background-color: #ED664C;
     border-radius: 20px;
     margin-left: 15px;
   }
@@ -234,7 +234,7 @@
     width: 100%;
   }
   
-  #u-name {
+  #userName {
     position: absolute;
     top: 120px;
     left: 208px;
@@ -765,7 +765,7 @@
   }
   
   .p-u-info a {
-    color: #4267b2;
+    color: #FDC75B;
   }
   
   .p-dt {
@@ -848,99 +848,112 @@
   }
   
   #loading i {
-    color: #4267b2;
+    color: #FDC75B;
     font-size: 32px;
     display: block;
   }
   /* Content area finished */
-  
-  /* Chat bar */
-  #r-col {
-    position: relative;
-    width: 150px;
-  }
-  
-  #chat-bar {
-    position: absolute;
-    top: -55px;
-    right: 55px;
-    bottom: 0px;
-    left: 0px;
-  }
-  
-  #chat-lb {
-    color: #3a5795;
-    font-size: 16px;
-    text-align: center;
-    margin: 23px 0px;
-  }
-  
-  #chat-lb i {
-    font-size: 18px;
-    margin-right: 4px;
-    vertical-align: middle;
-  }
-  
-  #chat-lb span {
-    position: relative;
-    top: 2px;
-  }
-  
-  .on-ct {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    margin: 28px auto 0 auto;
-    border-radius: 50%;
-  }
-  
-  #cts .on-ct:first-child {
-    margin-top: 0px;
-  }
-  
-  .on-ct img {
-    border-radius: 50%;
-  }
-  
-  .on-ct.active:after {
-    content: "";
-    position: absolute;
-    top: 3px;
-    right: 2px;
-    width: 10px;
-    height: 10px;
-    background-color: #2ecd18;
-    border-radius: 50%;
-    box-shadow: 0px 0px 0px 3px #e9ebee;
-    z-index: 1;
-  }
-  
-  #ct-sett {
-    margin-top: 55px;
-  }
-  
-  #ct-sett i {
-    color: #3a5795;
-    padding: 13px;
-    background-color: #d8e4ff;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-  /* Chat bar finished */
-  
-  /* Footer */
-  #device-bar-2 {
-    padding: 9px 0px 13px 0px;
-    background-color: #000;
-  }
-  
-  #device-bar-2 i {
-    display: block;
-    width: 40px;
-    color: #fff;
-    font-size: 40px;
-    text-align: center;
-    margin: 0 auto;
-  }
-  /* Footer finished */
-  
+  .post {
+    width: 550px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.post .post-top {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.post .post-top .dp {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.post .post-top .dp>img {
+  width: 100%;
+  cursor: pointer;
+}
+
+.post .post-top .post-info {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.post .post-top .post-info .name {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.post .post-top .post-info .time {
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.post .post-top i {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.post .post-top>input {
+  height: 40px;
+  padding: 5px 10px;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  flex: 1;
+  background: #eee;
+  margin-left: 10px;
+}
+
+.post .post-content {
+  font-size: 16px;
+  font-weight: normal;
+  padding: 10px;
+}
+
+.post .post-content>img {
+  width: 100%;
+  margin: 5px 0px;
+}
+
+
+.imgDev {
+  width: 100%;
+}
+
+.postImg {
+  width: 100%;
+}
+
+/* plus button */
+
+.post .post-bottom {
+  box-shadow: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 5px 0px 5px;
+}
+
+.post .post-bottom .action {
+  padding: 10px;
+  border-radius: 10px;
+  transition: .3s ease-in;
+  cursor: pointer;
+}
+
+.post .post-bottom .action:hover {
+  background: #eee;
+}
+
+.post.create .post-bottom>.action {
+  color: #d74;
+}
+
+.container .right-panel {
+  padding: 1rem;
+}
