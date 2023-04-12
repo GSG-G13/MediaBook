@@ -1,5 +1,5 @@
 const btn = document.getElementById("btn");
-const divMessage = document.getElementById('divmessage')
+const divMessage = document.getElementById('divMessage')
 
 btn.addEventListener("click", (e) => {
   e.preventDefault();
@@ -31,17 +31,18 @@ btn.addEventListener("click", (e) => {
   })
     .then((data) => data.json())
     .then((data) => {
-      // const divMessage = document.getElementById("divmessage")
+      
       if(data.error == true){
-        const parMessage = document.createElement('p');
-        parMessage.textContent = data.data.errors[0].message;
-        divMessage.appendChild(parMessage);
+        const paragraph = document.createElement('p');
+        paragraph.className = "paragraph"
+        paragraph.textContent = data.data.errors[0].message;
+        divMessage.appendChild(paragraph);
       }else{
         window.alert('Login Successfully, Go TO Profile')
       }
     })
     .catch(err=> console.log(err));
   }
-    const FormData = document.getElementById("formData")
-    FormData.reset();
+    const formData = document.getElementById("formData")
+    formData.reset();
 });
