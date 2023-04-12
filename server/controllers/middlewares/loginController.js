@@ -33,7 +33,7 @@ const addLoginController = (req, res) => {
       .then(data => {
         const isMatch  = bcrypt.compare(password, data.rows[0].passwords)
         if (isMatch) {
-          jwt.sign({ login: true , user_id: data.rows[0].id }, process.env.PASSWORD_TOKEN,(err, token)=> {
+          jwt.sign({ login: true , user_id: data.rows[0].id }, process.env.SECRET_KEY,(err, token)=> {
             res.cookie("access_token", token).json({ message: "Success" });
           });
           return;

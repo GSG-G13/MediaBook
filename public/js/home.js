@@ -24,7 +24,7 @@ function createPostElement(data) {
 
     const nameP = document.createElement("p");
     nameP.classList.add("name");
-    nameP.textContent = "Anuska Sharma";
+    nameP.textContent = `${element.firstname} ${element.surname}`;
 
     const timeSpan = document.createElement("span");
     timeSpan.classList.add("time");
