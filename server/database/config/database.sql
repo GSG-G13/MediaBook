@@ -11,11 +11,15 @@ CREATE TABLE users(
     gender VARCHAR(20)
 );
 
+-- Insert into posts (content,image_url, user_id) values ('Eman and alaa are here', 'https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg',1);
+
+
 CREATE TABLE posts(
     id SERIAL PRIMARY KEY,
-    title VARCHAR (50) not null,
     content TEXT not null,
-    user_id int REFERENCES users(id)
+    image_url TEXT, 
+    user_id integer REFERENCES users(id)
 );
+
 
 COMMIT;
