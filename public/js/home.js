@@ -1,4 +1,6 @@
 const plusButton = document.querySelector(".plus-button");
+const userName = document.getElementById('name')
+
 
 function createPostElement(data) {
   data.forEach((element) => {
@@ -94,4 +96,15 @@ function createPostElement(data) {
 
 fetch("/posts")
   .then((data) => data.json())
-  .then(createPostElement);
+  .then(createPostElement)
+  .catch(console.log);
+
+fetch('/username')
+  .then(data => data.json())
+  .then(data => {
+    const userName = `${data.firstname} ${data.surname}`
+    return userName;
+  }).then(username => {
+    userName.textContent = username;
+  })
+  .catch(console.log);
