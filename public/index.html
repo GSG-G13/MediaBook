@@ -35,7 +35,7 @@
         </div>
 
         <div class="login-area">
-          <form action="/login" method="POST">
+          <form action="/login" method="POST" id="formData">
             <div class="email">
               <label for="email">Email or Phone</label>
               <input type="text" id="email" name="Email" required />
@@ -43,6 +43,7 @@
             <div class="password">
               <label for="pass">Password</label>
               <input type="password" id="pass" name="Password" required />
+              <div id="divMessage"></div>
               <a href="#">Forgotten Password</a>
             </div>
             <div class="btn">
