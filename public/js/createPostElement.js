@@ -1,6 +1,7 @@
 
 
 const createPostElement = (data) => {
+    document.querySelector(".posts").textContent = ''
     data.forEach((element) => {
       const postDiv = document.createElement("div");
       postDiv.classList.add("post");
