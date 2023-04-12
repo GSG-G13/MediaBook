@@ -33,7 +33,7 @@ const signupContoller = (req, res) => {
         .catch(err => {
           res.status(401).json({
             error: true,
-            massage: err.detail
+            massage: err.details
           })
         })}
       })
