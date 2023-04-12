@@ -23,20 +23,21 @@ const addLoginController = (req, res) => {
     loginQuery(email)
       .then((data) => {
         if (data.rowCount) {
-          return bcrypt.compare(password, data.rows[0].passwords)
+          return data
         }
         else {
           res.status(401).json({ message: "Please Create Account First!" })
           throw new Error('no email found');
         }
       })
-      .then(isMatched => {
-        if (isMatched) {
-          jwt.sign({ login: true }, process.env.PASSWORD_TOKEN, function (err, token) {
+      .then(data => {
+        const isMatch  = bcrypt.compare(password, data.rows[0].passwords)
+        if (isMatch) {
+          jwt.sign({ login: true , user_id: data.rows[0].id }, process.env.SECRET_KEY,(err, token)=> {
             res.cookie("access_token", token).json({ message: "Success" });
           });
           return;
-        } else if (!isMatched) {
+        } else if (!isMatch) {
           res.status(401).json({ message: "Wrong Password!" });
         }
       })
