@@ -1,11 +1,5 @@
-const plusButton = document.querySelector(".plus-button");
-const userName = document.getElementById('name')
+const userName = document.getElementById('userName')
 
-
-fetch("/posts")
-  .then((data) => data.json())
-  .then(createPostElement)
-  .catch(console.log);
 
 fetch('/username')
   .then(data => data.json())
@@ -16,3 +10,11 @@ fetch('/username')
     userName.textContent = username;
   })
   .catch(console.log);
+  
+  fetch('/userPosts',{
+    method: 'GET'
+  })
+    .then(data => data.json())
+    .then(createPostElement)
+
+    
