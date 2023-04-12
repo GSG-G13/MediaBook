@@ -15,6 +15,7 @@ fetch('/username')
     method: 'GET'
   })
     .then(data => data.json())
+    .then(data => data.reverse())
     .then(createPostElement)
 
     

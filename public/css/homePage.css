@@ -333,7 +333,9 @@ nav .nav-right a>i {
     padding: 5px 5px 0px 5px;
 }
 
-.post .post-bottom .action {
+.post .post-bottom .action ,.plus-button{
+    color: #d74;
+    border:2px solid #d74;
     padding: 10px;
     border-radius: 10px;
     transition: .3s ease-in;
@@ -350,6 +352,10 @@ nav .nav-right a>i {
 
 .container .right-panel {
     padding: 1rem;
+}
+#addImg{
+    display: none;
+    overflow:hidden;
 }
 
 .right-panel .pages-section,
