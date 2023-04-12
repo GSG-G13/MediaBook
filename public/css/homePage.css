@@ -315,6 +315,14 @@ nav .nav-right a>i {
     margin: 5px 0px;
 }
 
+.imgDev {
+    width: 100%;
+}
+
+.postImg {
+    width: 100%;
+}
+
 /* plus button */
 
 .post .post-bottom {
