@@ -397,3 +397,19 @@ nav .nav-right a>i {
     cursor: pointer;
     margin-left: 8px;
 }
+.logout{
+    text-decoration: none;
+    color: #333;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: #eee;
+    display: grid;
+    place-items: center;
+    margin-left: 1rem;
+    border: none;
+    cursor: pointer;
+}
+.logout:hover{
+    background-color: rgb(252, 85, 85);
+}

@@ -1,7 +1,6 @@
 const plusButton = document.querySelector(".plus-button");
 const userName = document.getElementById('name')
 
-
 function createPostElement(data) {
   data.forEach((element) => {
     const postDiv = document.createElement("div");
