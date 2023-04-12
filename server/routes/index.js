@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const { addLoginController, signupContoller } = require("../controllers");
-const { clientError, serverError, homePage } = require("../controllers/errors/errors");
+const { clientError, serverError } = require("../controllers/errors/errors");
+const homePage = require("../controllers/middlewares/homeController");
 // const { path } = require("../app");
 
 router.post("/login", addLoginController);

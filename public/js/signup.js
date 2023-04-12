@@ -7,6 +7,7 @@ const dateInput = document.getElementById("dateInput");
 const gender = document.getElementById("gender");
 const signInBtn = document.getElementById("signUpSubmit");
 
+
 signInBtn.addEventListener("click", () => {
   if (firstnameInput.value.length < 3 || firstnameInput.value.length > 40) {
     window.alert(

@@ -11,8 +11,6 @@ const serverError = (err, req, res, next) => {
     .status(500)
     .sendFile(join(__dirname, '..', '..', '..', 'public', 'html', 'server500.html'));
 };
-const homePage = (req, res) => {
-  res.sendFile(join(__dirname, '..', '..', '..', 'public', 'html', 'home.html'));
-};
 
-module.exports = { clientError, serverError, homePage };
+
+module.exports = { clientError, serverError };
