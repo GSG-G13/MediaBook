@@ -16,9 +16,15 @@ btn.addEventListener("click", (e) => {
     }),
   })
     .then((data) => data.json())
+    .then(data => {
+      if (data.message === "Success") {
+        window.location.href = "/home";
+      }
+    })
     .catch((err) => {
-      errores.forEach(element => {
-        
-      });
+      console.log(err, "Fronttt");
+      // errores.forEach(element => {
+
+      // });
     });
 });
