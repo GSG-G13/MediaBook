@@ -12,7 +12,9 @@
   button {
     font-family: Helvetica;
   }
-  
+  #homeBtn{
+    color: white;
+  }
   img {
     display: block;
     width: 100%;
