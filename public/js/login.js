@@ -1,11 +1,12 @@
 const btn = document.getElementById("btn");
 const divMessage = document.getElementById('divMessage')
-const homeBtn =  document.getElementById('home')
+const homeBtn = document.getElementById('home')
 // homeBtn.addEventListener('click', () => {
 //   window.location.href = "/profile.html";
 // })
 btn.addEventListener("click", (e) => {
   e.preventDefault();
+ 
   const email = document.getElementById("email");
   const password = document.getElementById("pass");
   if (email.value.length < 3 || email.value.length > 80) {

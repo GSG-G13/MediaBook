@@ -49,17 +49,17 @@ signInBtn.addEventListener("click", () => {
   })
     .then((data) => data.json())
     .then((result) => {
-      if(result.error == true){
+      if (result.error == true) {
         window.alert(result.massage);
-      }else{
+      } else {
         window.alert('create account successfully, login to your account')
       }
-    firstnameInput.value =''
-    surnameInput.value = ''
-    emailInput.value = ''
-    passwordInput.value = ''
-    dateInput.value = ''
-    gender.value= ''
+      firstnameInput.value = ''
+      surnameInput.value = ''
+      emailInput.value = ''
+      passwordInput.value = ''
+      dateInput.value = ''
+      gender.value = ''
     })
     .catch(err => {
       window.alert(err)

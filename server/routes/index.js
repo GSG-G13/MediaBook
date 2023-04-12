@@ -22,7 +22,7 @@ router.post("/logout", logoutController);
 
 router.get("/posts", getPostsController);
 router.get('/username', getusername)
-router.post("/addPost",postPostsController)
+router.post("/addPost", postPostsController)
 router.get('/userPosts', getUserPostsController)
 router.use(homePage);
 
